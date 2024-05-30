@@ -9,17 +9,6 @@ namespace ThreeAxisControl.ViewModels
 {
     public abstract class PageViewModelBase : ViewModelBase
     {
-        private CncData _cncData;
-
-        public CncData CncData
-        {
-            get { return _cncData; }
-            set
-            {
-                _cncData = value;
-                OnPropertyChanged();
-            }
-        }
         /// <summary>
         /// Prüfen ob zu Manual gewechselt werden kann
         /// </summary>

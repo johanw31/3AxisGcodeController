@@ -3,12 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThreeAxisControl.LogicViewModel;
 
 namespace ThreeAxisControl.ViewModels
 {
     public class SettingsViewModel : PageViewModelBase
     {
+        private readonly CncData? _cncData;
+        public SettingsViewModel()
+        {
+        }
+        public SettingsViewModel(CncData CncData)
+        {
+            _cncData = CncData;
+        }
         public string Title => "Welcome to our Wizard-Sample.";
+
+        public string XStepperId
+        {
+            get { return _cncData.Settings.XStepperId; }
+            set { _cncData.Settings.XStepperId = value; OnPropertyChanged(); }
+        }
 
         /// <summary>
         /// The content of this page

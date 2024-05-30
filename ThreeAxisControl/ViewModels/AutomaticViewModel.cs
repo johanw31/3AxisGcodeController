@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThreeAxisControl.LogicViewModel;
 
 namespace ThreeAxisControl.ViewModels
 {
     public class AutomaticViewModel : PageViewModelBase
     {
+        private readonly CncData? _cncData;
+        public AutomaticViewModel() 
+        {
+        }
+        public AutomaticViewModel(CncData CncData)
+        {
+            _cncData = CncData;
+        }
         public string Title => "3 Axis Controller";
 
 

@@ -5,45 +5,31 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThreeAxisControl.LogicViewModel;
 
 namespace ThreeAxisControl.ViewModels
 {
     public class ManualViewModel : PageViewModelBase
     {
+        private readonly CncData? _cncData;
         public ManualViewModel()
         {
-            // Listen to changes of MailAddress and Password and update CanNavigateNext accordingly
-            //this.WhenAnyValue(x => x.MailAddress, x => x.Password)
-            //    .Subscribe(_ => UpdateCanNavigateNext());
         }
-
-
-        private string? _MailAddress;
-
-        /// <summary>
-        /// The E-Mail of the user. This field is required
-        /// </summary>
-        [Required]
-        [EmailAddress]
-        public string? MailAddress
+        public ManualViewModel(CncData CncData)
         {
-            get { return _MailAddress; }
-            set { _MailAddress= value; OnPropertyChanged(); }
+            _cncData = CncData;
         }
 
-
-        private string? _Password;
-
-        /// <summary>
-        /// The password of the user. This field is required.
-        /// </summary>
-        [Required]
-        public string? Password
+        // Dependency Injektion Test
+        public string XStepperId
         {
-            get { return _Password; }
-            set { _Password = value; OnPropertyChanged(); }
+            get { return _cncData.Settings.XStepperId; }
+            set
+            {
+                _cncData.Settings.XStepperId = value;
+                OnPropertyChanged();
+            }
         }
-
 
         private bool _CanNavigateNext;
 

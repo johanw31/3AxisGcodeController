@@ -10,9 +10,11 @@ namespace ThreeAxisControl.LogicViewModel
     public class CncData : ViewModelBase
     {
         private Manual _manual;
+        private Settings _settings;
         public CncData() 
         { 
             _manual = new Manual();
+            _settings = new Settings();
         }
 
         public Manual Manual
@@ -21,6 +23,16 @@ namespace ThreeAxisControl.LogicViewModel
             set 
             {
                 _manual = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Settings Settings
+        {
+            get { return _settings; }
+            set
+            {
+                _settings = value;
                 OnPropertyChanged();
             }
         }
