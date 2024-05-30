@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreeAxisControl", "ThreeAxisControl\ThreeAxisControl.csproj", "{DCCFB31F-C933-4891-B2BE-74692BF8DB7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreeAxisControl.Desktop", "ThreeAxisControl.Desktop\ThreeAxisControl.Desktop.csproj", "{4BE4766E-F816-4436-BB5A-1FC411FC9ADE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCCFB31F-C933-4891-B2BE-74692BF8DB7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCCFB31F-C933-4891-B2BE-74692BF8DB7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCCFB31F-C933-4891-B2BE-74692BF8DB7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCCFB31F-C933-4891-B2BE-74692BF8DB7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE4766E-F816-4436-BB5A-1FC411FC9ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE4766E-F816-4436-BB5A-1FC411FC9ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE4766E-F816-4436-BB5A-1FC411FC9ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE4766E-F816-4436-BB5A-1FC411FC9ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22C78628-3A51-4ED6-BF33-6CB55DE62583}
+	EndGlobalSection
+EndGlobal

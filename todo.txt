@@ -1,0 +1,4 @@
+- Klasse um bei Start alles zu Laden --> mit Konstruktor in dem müssen alle Daten vom letzten mal speichern geladen werde. Speichern in csv. Laden aus csv. Oder Configuration Manager? Aufruf des konstruktors über einen neuen async task. Klasse muss ausgeben bei wie viel prozent vom Laden sie ist.--> Anhand der Zeilen in csv?
+- Gcode interpreter --> GCode file in x,y,z Koordinaten umrechnen --> das Delta zwischen ist und soll muss berechnet werden
+- 
+-

@@ -1,0 +1,47 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:ThreeAxisControl.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ThreeAxisControl.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ThreeAxisControl"
+        x:CompileBindings="True"
+        x:DataType="vm:MainWindowViewModel"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="Transparent"
+        Width="1200"
+        Height="800"
+        MinWidth="1200"
+        MinHeight="800"
+        MaxWidth="1200"
+        MaxHeight="800">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel />
+  </Design.DataContext>
+
+  <Panel>
+    <ExperimentalAcrylicBorder IsHitTestVisible="False">
+      <ExperimentalAcrylicBorder.Material>
+        <ExperimentalAcrylicMaterial
+            BackgroundSource="Digger"
+            TintColor="Black"
+            TintOpacity="1"
+            MaterialOpacity="0.65" />
+      </ExperimentalAcrylicBorder.Material>
+    </ExperimentalAcrylicBorder>
+
+    <Grid RowDefinitions="*,Auto" Margin="10">
+      <TransitioningContentControl Content="{Binding CurrentPage}" />
+
+      <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="5"
+        HorizontalAlignment="Center">
+        <Button Command="{Binding NavigateAutomaticViewCommand}" Content="Automatic" Width="100" HorizontalContentAlignment="Center"/>
+        <Button Command="{Binding NavigateManualViewCommand}" Content="Manual" Width="100" HorizontalContentAlignment="Center"/>
+        <Button Command="{Binding NavigateSettingsViewCommand}" Content="Settings" Width="100" HorizontalContentAlignment="Center"/>
+      </StackPanel>
+    </Grid>
+  </Panel>
+</Window>
