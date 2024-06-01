@@ -15,20 +15,104 @@ namespace ThreeAxisControl.ViewModels
         }
         public SettingsViewModel(CncData CncData)
         {
-            _cncData = CncData;
+            if (CncData is not null)
+            {
+                _cncData = CncData;
+            }
+            else
+            {
+                _cncData = new CncData();
+                throw new Exception("CNC Data war null");
+            }
         }
-        public string Title => "Welcome to our Wizard-Sample.";
 
         public string XStepperId
         {
-            get { return _cncData.Settings.XStepperId; }
-            set { _cncData.Settings.XStepperId = value; OnPropertyChanged(); }
+            get => _cncData.Settings.XStepperId;
+            set 
+            {   
+                _cncData.Settings.XStepperId = value; 
+                OnPropertyChanged(); 
+            }
         }
 
-        /// <summary>
-        /// The content of this page
-        /// </summary>
-        public string Message => "Press \"Next\" to register yourself.";
+        public string YStepperId
+        {
+            get => _cncData.Settings.XStepperId;
+            set
+            {
+                _cncData.Settings.XStepperId = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string ZStepperId
+        {
+            get => _cncData.Settings.XStepperId;
+            set
+            {
+                _cncData.Settings.XStepperId = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int MaxVelocity
+        {
+            get => _cncData.Settings.MaxVelocity;
+            set
+            {
+                _cncData.Settings.MaxVelocity = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int Acceleration
+        {
+            get => _cncData.Settings.Acceleration;
+            set
+            {
+                _cncData.Settings.Acceleration = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int Deacceleration
+        {
+            get => _cncData.Settings.Deacceleration;
+            set
+            {
+                _cncData.Settings.Deacceleration = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int MotorCurrent
+        {
+            get => _cncData.Settings.MotorCurrent;
+            set
+            {
+                _cncData.Settings.MotorCurrent = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public byte StepResolution
+        {
+            get => _cncData.Settings.StepResolution;
+            set
+            {
+                _cncData.Settings.StepResolution = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+
+
+
+
+
+
 
         /// <summary>
         /// Es darf auf Manual gewechselt werden

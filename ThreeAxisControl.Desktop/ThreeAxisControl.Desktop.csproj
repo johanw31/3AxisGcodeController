@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Tinkerforge" Version="2.1.33" />
   </ItemGroup>
 
   <ItemGroup>

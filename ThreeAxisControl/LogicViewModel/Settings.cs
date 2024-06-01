@@ -9,38 +9,14 @@ namespace ThreeAxisControl.LogicViewModel
 {
     public class Settings : ViewModelBase
     {
-        private string _xStepperId = "123";
-        public string XStepperId
-        {
-            get => _xStepperId;
-            set
-            {
-                _xStepperId = value;
-                OnPropertyChanged(nameof(XStepperId));
-            }
-        }
-
-        private string _yStepperId = "";
-        public string YStepperId
-        {
-            get => _yStepperId;
-            set
-            {
-                _yStepperId = value;
-                OnPropertyChanged(nameof(YStepperId));
-            }
-        }
-
-        private string _zStepperId = "";
-        public string ZStepperId
-        {
-            get => _zStepperId;
-            set
-            {
-                _zStepperId = value;
-                OnPropertyChanged(nameof(ZStepperId));
-            }
-        }
+        public string? XStepperId { get; set; }
+        public string? YStepperId{ get; set; }
+        public string? ZStepperId { get; set; }
+        public int MaxVelocity{ get; set; }
+        public int Acceleration{ get; set; }
+        public int Deacceleration{ get; set; }
+        public int MotorCurrent{ get; set; }
+        public byte StepResolution{ get; set; }
     }
     
 }

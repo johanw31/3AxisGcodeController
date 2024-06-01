@@ -11,16 +11,17 @@ namespace ThreeAxisControl.LogicViewModel
     {
         private Manual _manual;
         private Settings _settings;
-        public CncData() 
-        { 
+        private Automatic _automatic;
+        public CncData()
+        {
             _manual = new Manual();
             _settings = new Settings();
         }
 
         public Manual Manual
         {
-            get { return _manual; }
-            set 
+            get => _manual; 
+            set
             {
                 _manual = value;
                 OnPropertyChanged();
@@ -29,10 +30,19 @@ namespace ThreeAxisControl.LogicViewModel
 
         public Settings Settings
         {
-            get { return _settings; }
+            get => _settings;
             set
             {
                 _settings = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Automatic Automatic 
+        {   get => _automatic;
+            set
+            {
+                _automatic = value;
                 OnPropertyChanged();
             }
         }
